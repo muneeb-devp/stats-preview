@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: hsl(233, 47%, 7%);
+}
+
+main {
+  display: flex;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 60vw;
+  height: auto;
+  background: #1c1938;
+}
+
+main > * {
+  flex: 1;
+}
+
+main div.info {
+  padding: 2rem 2.5rem;
+}
+
+div.img-box {
+  background-image: url('../images/image-header-desktop.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+div.img-box::after {
+  content: '';
+  background: hsla(277, 64%, 61%, 0.4);
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+div.info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: flex-start;
+}
+
+div.info h1 span {
+  color: hsl(277, 64%, 61%);
+}
+
+div.info h1 {
+  font-size: 2.5rem;
+  margin: 2rem 0;
+  /* padding: 2rem 0; */
+  font-family: 'Inter', 'Courier New', Courier, monospace;
+  color: #fff;
+}
+
+div.info p {
+  font-family: 'Lexend Deca', 'Courier New', Courier, monospace;
+  color: hsla(0, 0%, 100%, 0.75);
+  font-size: 0.8rem;
+  word-spacing: 2px;
+  line-height: 150%;
+  width: 80%;
+}
+
+div.stats {
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  margin-top: 4rem;
+}
+
+div.stats div.stat-box {
+  display: flex;
+  flex-direction: column;
+}
+
+div.stats div.stat-box span:nth-child(1) {
+  font-weight: 700;
+  font-size: 1.7rem;
+  font-family: 'Inter', 'Courier New', Courier, monospace;
+  color: #fff;
+}
+
+div.stats div.stat-box span:nth-child(2) {
+  text-transform: uppercase;
+  font-family: 'Inter', 'Courier New', Courier, monospace;
+  font-size: 0.8rem;
+  color: hsla(0, 0%, 100%, 0.75);
+}
+
+@media screen and (max-width: 500px) {
+  main {
+    flex-direction: column-reverse;
+    height: 90%;
+    width: 90%;
+  }
+
+  main div.info {
+    padding: 1rem 1.5rem;
+  }
+
+  div.stats {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 1rem;
+  }
+
+  div.stats .stat-box {
+    padding: 0.5rem;
+  }
+
+  div.info h1 {
+    margin: 0;
+  }
+
+  div.info p {
+    margin: 0.9rem 0;
+    font-size: 0.8rem;
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 1080px) {
+  div.info h1 {
+    font-size: 1.5rem;
+  }
+
+  div.stats div.stat-box span:nth-child(1) {
+    font-size: 1.2rem;
+  }
+
+  div.stats div.stat-box span:nth-child(2) {
+    font-size: 0.6rem;
+  }
+}
